@@ -10,7 +10,7 @@ function generateWebsite() {
     const file = fileInput.files[0];
 
     if (!name || !role || !about || !skills.length || !phone || !email || !file) {
-        alert("Please fill all fields and upload a profile picture!");
+        alert("Olunga ellathayu fillu pannungada!");
         return;
     }
 
