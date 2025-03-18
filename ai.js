@@ -474,6 +474,9 @@ margin: 20px;
     .menu{
         display: block;
     }
+    .home-btn{
+      flex-direction: column;
+    }
 }
 
 `;
