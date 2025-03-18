@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hameed's Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Inter', 
+            sans-serif; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center; 
+            padding: 20px; }
+
+            h2{
+                margin: 10px; 
+             padding: 10px; 
+             width: 80%; max-width: 400px;
+             background-color: rgb(0, 250, 0);
+             border-radius: 5px;
+             border: solid rgb(0, 250, 0);
+             transition: .5s;
+            }
+        input,  select {
+             margin: 10px; 
+             padding: 10px; 
+             width: 80%; max-width: 400px;
+             border-radius: 5px;
+             border: solid rgb(0, 250, 0);
+             transition: .5s;
+            }
+            button{
+                font-size: 25px;
+                margin: 10px; 
+             padding: 10px; 
+             width: 80%; max-width: 400px;
+             border-radius: 5px;
+             border: solid rgb(0, 250, 0);
+             transition: .5s;
+             background-color: rgb(0, 250, 0);
+            }
+            button:hover{
+              
+                transform: scale(1.05);
+              box-shadow: 2px 2px 50px rgb(0, 250, 0);
+
+            }
+
+            
+            textarea{
+                margin: 10px; 
+             padding: 10px; 
+             width: 80%; max-width: 400px;
+             height: 200px;
+             border-radius: 5px;
+             transition: .5s;
+             border: solid rgb(0, 250, 0);
+            }
+            input:hover,  select:hover, textarea:hover{
+                transform: scale(1.05);
+                box-shadow: 2px 2px 50px rgb(0, 250, 0);
+            }
+       
+    </style>
+</head>
+<body>
+    <h2>Hameed's Portfolio Website Generator</h2>
+    
+    
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="text" id="role" placeholder="Your Role">
+    
+    <input type="file" id="profilePic" accept="image/*">
+    <textarea id="about" placeholder="About Yourself"></textarea>
+    <input type="text" id="skills" placeholder="Skills (Give with Comma)">
+    <input type="text" id="phone" placeholder="Phone Number">
+    <input type="email" id="email" placeholder="Email">
+    <label>Choose Theme Color:</label>
+    <input type="color" id="themeColor" value="#00fa00">
+    <button onclick="generateWebsite()">Generate & Download</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="ai.js">
+
+    </script>
+    
+</body>
+</html>
