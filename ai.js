@@ -30,100 +30,9 @@ function generateWebsite() {
 <link
 href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
 rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-
-<body>
-<div class="navbar">
-<div class="nav-logo">
-    <h1 class="h1-1">Wel</h1>
-    <h1 class="h1-2">come</h1>
-</div>
-<div class="nav-elements">
-    <a href="#Home">Home</a>
-    <a href="#About">About</a>
-    <a href="#Skills">Skills</a>
-    <a href="#Contact">Contact</a>
-</div>
-<i id="bars" class="fa-solid fa-bars" style=" color: White; margin: 50px;"></i>
-<div class="menu">
-    <i id="cross" class="fa-solid fa-close" style=" color: black; margin: 10px;"></i>
-    <div class="menu-elements">
-        <a href="#Home">Home</a>
-        <a href="#About">About</a>
-        <a href="#Skills">Skills</a>
-        <a href="#Contact">Contact</a>
-    </div>
-
-</div>
-<div class='rotate'></div>
-                <div class='rotate2'></div>
-
-</div>
-
-
-
-
-<div class="home" id="Home">
-
-<div class="welcome">
-    <div class="hi">
-    <h1>Hi !</h1>
-    <div style="display: flex; gap: 10px;"><h1> I am </h1><h1 style="color: ${themeColor};">${name}</h1></div>
-    <div style="display: flex; gap: 10px;"><h1> I am a</h1><h1 style="color: ${themeColor};">${role}</h1></div>
-</div>
-    <div class="home-btn">
-        <a href="#Contact">Contact</a>
-        <a href="#Skills">Skills</a>
-    </div>
-</div>
-<div class="profile-picture">
-    <img src="${imageBase64}" alt="Profile">
-</div>
-
-</div>
-
-<div class="about" id="About">
-<h1>About</h1>
-
-<div class="about-section">
-<p>${about}</p>
-</div>
-</div>
-
-<div class="skills" id="Skills">
-  
-<h1>Skills</h1>
-<div class="skills-section">
-   
-                            ${skills.map(skill => `<div class="skill-box"><p>${skill}</p></div>`).join(" ")}
-                       
-</div>
-
-</div>
-
-<div class="contact" id="Contact">
-<h1>Contact</h1>
-<div class="contact-section">
-    <div class="msg-ico">Contact me</div>
-    <div class="contact-details">
-        <a href="#"><i class="fa-solid fa-phone" style=" color: ${themeColor}; margin: 10px;"></i>${phone}</a>
-<a href="#"><i class="fa-solid fa-message" style=" color: ${themeColor}; margin: 10px;"></i>${email}</a>
-    </div>
-</div>
-
-</div>
-
-<a href="#" class="float">^</a>
-
-<script src="script.js"></script>
-</body>
-
-</html>`;
-
-        const cssContent = `
+<style>
         
 *{
     font-family: "Inter", sans-serif;
@@ -479,10 +388,93 @@ margin: 20px;
     }
 }
 
-`;
+</style>
+</head>
 
-const jsContent=`
+<body>
+<div class="navbar">
+<div class="nav-logo">
+    <h1 class="h1-1">Wel</h1>
+    <h1 class="h1-2">come</h1>
+</div>
+<div class="nav-elements">
+    <a href="#Home">Home</a>
+    <a href="#About">About</a>
+    <a href="#Skills">Skills</a>
+    <a href="#Contact">Contact</a>
+</div>
+<i id="bars" class="fa-solid fa-bars" style=" color: White; margin: 50px;"></i>
+<div class="menu">
+    <i id="cross" class="fa-solid fa-close" style=" color: black; margin: 10px;"></i>
+    <div class="menu-elements">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Skills">Skills</a>
+        <a href="#Contact">Contact</a>
+    </div>
 
+</div>
+<div class='rotate'></div>
+                <div class='rotate2'></div>
+
+</div>
+
+
+
+
+<div class="home" id="Home">
+
+<div class="welcome">
+    <div class="hi">
+    <h1>Hi !</h1>
+    <div style="display: flex; gap: 10px;"><h1> I am </h1><h1 style="color: ${themeColor};">${name}</h1></div>
+    <div style="display: flex; gap: 10px;"><h1> I am a</h1><h1 style="color: ${themeColor};">${role}</h1></div>
+</div>
+    <div class="home-btn">
+        <a href="#Contact">Contact</a>
+        <a href="#Skills">Skills</a>
+    </div>
+</div>
+<div class="profile-picture">
+    <img src="${imageBase64}" alt="Profile">
+</div>
+
+</div>
+
+<div class="about" id="About">
+<h1>About</h1>
+
+<div class="about-section">
+<p>${about}</p>
+</div>
+</div>
+
+<div class="skills" id="Skills">
+  
+<h1>Skills</h1>
+<div class="skills-section">
+   
+                            ${skills.map(skill => `<div class="skill-box"><p>${skill}</p></div>`).join(" ")}
+                       
+</div>
+
+</div>
+
+<div class="contact" id="Contact">
+<h1>Contact</h1>
+<div class="contact-section">
+    <div class="msg-ico">Contact me</div>
+    <div class="contact-details">
+        <a href="#"><i class="fa-solid fa-phone" style=" color: ${themeColor}; margin: 10px;"></i>${phone}</a>
+<a href="#"><i class="fa-solid fa-message" style=" color: ${themeColor}; margin: 10px;"></i>${email}</a>
+    </div>
+</div>
+
+</div>
+
+<a href="#" class="float">^</a>
+
+<script >
 const menu=document.querySelector(".menu");
 const cross=document.getElementById("cross");
 const menu_bar=document.getElementById("bars");
@@ -494,14 +486,18 @@ menu.style.left="0";
 cross.addEventListener("click",()=>{
 menu.style.left="-100%";
 });
-`;
+</script>
+</body>
+
+</html>`;
+
+ 
 
 
 
         const zip = new JSZip();
         zip.file("index.html", htmlContent);
-        zip.file("style.css", cssContent);
-        zip.file("script.js", jsContent);
+       
         zip.generateAsync({ type: "blob" }).then(function(content) {
             const link = document.createElement("a");
             link.href = URL.createObjectURL(content);
